@@ -1,5 +1,5 @@
 const jsonfile = require('jsonfile');
-const moment = require('moment');
+var moment = require('moment-timezone');
 const simpleGit = require('simple-git')
 const FILE_PATH = './data.json';
 const { Random } = require("random-js");
@@ -22,3 +22,5 @@ const commit = n =>{
 
 
 commit(50);
+
+console.log(moment().tz("America/Los_Angeles").format('YYYY-MM-DD-LTS'))
